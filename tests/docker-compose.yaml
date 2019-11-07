@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  aerospike:
+    image: aerospike/aerospike-server:4.7.0.2
+    ports:
+      - 3000:3000
+    volumes:
+      - ./aerospike.conf:/opt/aerospike/etc/aerospike.conf:ro
+    command: --config-file /opt/aerospike/etc/aerospike.conf
